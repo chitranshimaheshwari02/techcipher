@@ -1,0 +1,113 @@
+// .home {
+//   .intro {
+//     text-align: center;
+//     padding: 4rem 2rem;
+//     background: #fafafa;
+//     h2 {
+//       font-size: 2rem;
+//       margin-bottom: 1rem;
+//     }
+//   }
+// }
+
+
+@import "../assets/scss/variables";
+@import "../assets/scss/mixins";
+
+.home {
+  font-family: $font-family-primary;
+  background-color: $light-bg;
+  color: $text-color;
+
+  .intro {
+    padding: 6rem 1rem;
+    text-align: center;
+    background: $white;
+
+    h2 {
+      @include heading-style;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+  }
+
+  .highlights {
+    padding: 6rem 1rem;
+    background: $light-bg;
+
+    h2 {
+      text-align: center;
+      @include heading-style;
+      margin-bottom: 3rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+
+      .card {
+        background: $white;
+        padding: 2rem;
+        border-radius: 16px;
+        box-shadow: $shadow-soft;
+        text-align: left;
+        transition: all 0.3s ease;
+
+        h3 {
+          color: $primary-color;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          line-height: 1.6;
+        }
+
+        &:hover {
+          transform: translateY(-8px);
+          box-shadow: $shadow-strong;
+        }
+      }
+    }
+  }
+
+  .cta {
+    text-align: center;
+    padding: 6rem 1rem;
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    color: white;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+
+    .btn-primary {
+      background: white;
+      color: $primary-color;
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.9);
+        transform: translateY(-3px);
+      }
+    }
+  }
+}
