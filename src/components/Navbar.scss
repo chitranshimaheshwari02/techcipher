@@ -1,28 +1,97 @@
+@import "../assets/scss/variables";
+
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 3rem;
   background: #0d0d0d;
-  color: white;
+  color: $white;
+  position: relative;
+  z-index: 100;
 
   .logo {
     font-size: 1.8rem;
     font-weight: 700;
+    color: $primary-color;
   }
 
   .nav-links {
     list-style: none;
     display: flex;
     gap: 2rem;
+    margin: 0;
 
-    a {
-      color: white;
-      text-decoration: none;
-      transition: color 0.3s;
+    li {
+      a {
+        color: $white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
 
-      &:hover {
-        color: #00bcd4;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  // Hamburger (hidden on desktop)
+  .menu-toggle {
+    display: none;
+    color: $white;
+    cursor: pointer;
+  }
+
+  // 🔹 RESPONSIVE (Mobile)
+  @media (max-width: 768px) {
+    padding: 1rem 1.5rem;
+
+    .menu-toggle {
+      display: block;
+      z-index: 101;
+    }
+
+    .nav-links {
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 220px;
+      background: #111;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem 1.5rem;
+      border-radius: 0 0 0 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+      display: none;
+
+      li {
+        width: 100%;
+        padding: 0.5rem 0;
+
+        a {
+          display: block;
+          width: 100%;
+          padding: 0.5rem 0;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+      }
+
+      &.active {
+        display: flex;
+        animation: slideDown 0.3s ease forwards;
+      }
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   }
