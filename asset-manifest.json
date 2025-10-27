@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/techcipher/static/css/main.3a6ece0a.css",
-    "main.js": "/techcipher/static/js/main.96bb8651.js",
+    "main.js": "/techcipher/static/js/main.217c3367.js",
     "static/js/453.bf15053f.chunk.js": "/techcipher/static/js/453.bf15053f.chunk.js",
     "index.html": "/techcipher/index.html",
     "main.3a6ece0a.css.map": "/techcipher/static/css/main.3a6ece0a.css.map",
-    "main.96bb8651.js.map": "/techcipher/static/js/main.96bb8651.js.map",
+    "main.217c3367.js.map": "/techcipher/static/js/main.217c3367.js.map",
     "453.bf15053f.chunk.js.map": "/techcipher/static/js/453.bf15053f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3a6ece0a.css",
-    "static/js/main.96bb8651.js"
+    "static/js/main.217c3367.js"
   ]
 }
